@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(45deg, rgba(58,171,180,1) 0%, rgba(29,253,197,1) 47%, rgba(252,176,69,1) 100%);
+    color: darkcyan;
+}
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addtask{
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 30px;
+}
+
+#Task{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: 0px;
+}
+
+#adbtn{
+    background-color: grey;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#myList{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+
+#myList > li{
+    color: honeydew;
+    background-color: cadetblue;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    margin-bottom: 2px;
+    position: relative; 
+}
+
+.far{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 8px;
+    padding-top: 6px;
+}
+
+#myList > li.checked{
+    text-decoration: line-through;
+    background-color: #3C5186;
+}
+
+#myList > li.checked::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    
+    border-left: 3px solid gold;
+    border-bottom: 3px solid gold;
+    top: 8px;
+    left: 8px;
+    transform: rotate(315deg);
+}
